@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: Champagne;
+	src: url(cac_champagne.woff) format('woff'),
+	     url(cac_champagne.ttf) format('ttf');
+}
+
+
+
+/* Body Styles */
+body { 
+margin-left: auto; 
+margin-right: auto; 
+max-width: 960px; 
+ min-width: 640px; 
+ width: 95%;
+}
+
+
+/* Body Header Styles */
+
+body > header > img { 
+ display: block; 
+ width: 100%; 
+}
+
+body > header > nav.horizontalNavigation li { 
+ width: 20%; 
+}
+
+
+/* Horizontal Navigation Styles */
+nav.horizontalNavigation li { 
+ display: block; 
+ float: left; 
+}
+
+nav.horizontalNavigation a { 
+ display: block; 
+ text-align: center; 
+}
+
+
+/* Left Column Styles */
+section#leftColumn { 
+ clear: left; 
+ float: left; 
+ padding: 1.5em;
+ width: 33%;
+}
+
+
+
+/* Right Column Styles */
+
+section#rightColumn { 
+ float: left; 
+ width: 67%; 
+}
+
+section#rightColumn img { 
+ display: block; 
+ width: 100%; 
+} 
+section#rightColumn > nav.horizontalNavigation li { 
+ width: 25%; 
+}
+
+
+/* Footer Styles */
+
+footer { 
+ background-color:#E7FBBE;
+    clear: left; 
+} 
+footer::after { 
+ clear: both; 
+ content: ""; 
+ display: table; 
+}
+
+footer > nav.verticalNavigation { 
+ float: left; 
+ width: 22%; 
+} 
+footer > section#contactInfo { 
+ float: left; 
+ width: 34%; 
+}
+
+
+html {
+   background-color:#D9D7F1;
+   font-family: Verdana, Geneva, Arial, sans-serif; 	
+}
+
+body {
+   background-color: #FFFDDE;  
+}
+
+
+/* Horizontal Navigation Styles */
+
+nav.horizontalNavigation a {
+   background-color: #FFCBCB;
+   font-family: Champagne, cursive;
+   font-size: 1.4em;
+   line-height: 1.8em;
+   text-align: center;
+}  
+
+nav.horizontalNavigation a:link, 
+nav.horizontalNavigation a:visited {
+   color: dodgerblue;
+}
+
+nav.horizontalNavigation a:hover, 
+nav.horizontalNavigation a:active {
+   background-color: deeppink;
+}   
+
+
+/* Left Column Paragraph Styles */
+
+section#leftColumn p {
+   color:black;
+   font-size: 0.9em;
+   line-height: 1.6em;
+}
+
+
+/* Footer Styles */
+
+body > footer {
+   font-size: 0.9em;
+   color: #FFCBCB;
+}
+
+body > footer h1 {
+   color: cadetblue;
+   font-size: 1.1em;
+   font-weight: normal;
+   letter-spacing: 0.2em;
+   margin: 1em 0 0.5em 1em;
+}
+
+/* Vertical Navigation Styles */
+
+nav.verticalNavigation ul {
+   margin-left: 1em;
+   line-height: 2em;
+}
+
+nav.verticalNavigation a:link, 
+nav.verticalNavigation a:visited {
+   color: rgb(186, 186, 156);
+}
+
+nav.verticalNavigation a:hover, 
+nav.verticalNavigation a:active {
+   text-decoration: none;
+}
+
+
+
+/* Grid Styles for Page Body */
+body { 
+ display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "header header" 
+                            "footer footer";
+    grid-column-gap: 15px;
+
+}
+body > header { 
+ grid-row: 1; 
+ grid-column: 1/-1; 
+}
+
+
+body > footer {grid-area: footer;}
+
+
+section { 
+ display: grid;
+grid-template-columns: repeat(2, 1fr);
+}
+
+section > h1 { 
+ grid-area: 1/1/2/3; 
+}
+
